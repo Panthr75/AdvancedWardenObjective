@@ -63,7 +63,7 @@ internal static class BlackoutState
 
             if (guix != null) guix.gameObject.SetActive(isNormal);
 
-            if (terminal.m_text != null) terminal.m_text.gameObject.SetActive(isNormal);
+            if (terminal.m_text != null && !isNormal) terminal.m_text.gameObject.SetActive(false);
         }
 
         foreach (var doorButton in LG_Objects.DoorButtons)
